@@ -8,6 +8,7 @@ from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('questao<int:i>/', views.question_view),
+    path('question/new/', views.question_new),
     path('', include('pastebin.urls')),
 ]
 
