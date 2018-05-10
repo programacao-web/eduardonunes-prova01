@@ -18,9 +18,10 @@ def question_view(request, i):
     return render(request, 'static.jinja2', ctx) 
 
 from pastebin.forms import PasteForm
+
 def question_new(request):
     form = PasteForm()
-    return render(request, 'forms.html', {'form': form})
+    return render(request, 'pastebin/forms.jinja2', {'form': form})
 
 
 questions = {
